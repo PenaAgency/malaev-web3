@@ -1,0 +1,46 @@
+.card {
+  position: relative;
+  background: linear-gradient(175deg, rgb(24, 159, 168),rgb(15, 93, 99));
+  filter: contrast(4);
+	--mask: linear-gradient(175deg, rgb(24, 159, 168),rgb(15, 93, 99));
+  border-radius: 20px;
+  width: 400px;
+  height: 200px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: 
+    radial-gradient(#000, transparent) 0 0/ 15px 15px space;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.card__adress {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.card__balance {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  font-size: 24px;
+}
+
+.card__network {
+  font-size: 24px;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+}
